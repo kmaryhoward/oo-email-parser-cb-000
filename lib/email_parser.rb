@@ -8,12 +8,11 @@ class EmailParser
   end
 
   def parse
-    if @@email_list.scan(/,/).empty?
-      @@email_list.split(" ").uniq
-    else
-      @@email_list.gsub(",", " ").split(" ").uniq
-    end
-
+    emails = @@email_list.gsub(".com", ".com ")
+    emails.split(/[,\s]+/).uniq
+    
   end
+
+
 
 end
