@@ -10,7 +10,7 @@ class EmailParser
   def parse
     emails = @@email_list.gsub(".com", ".com ")
     emails.split(/[,\s]+/).uniq
-    
+
   end
 
 
